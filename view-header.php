@@ -26,10 +26,13 @@
           <a class="nav-link" href="animals.php">Animals</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="land.php">Land</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="famers-animals.php">Farmers with animals</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="famers-land.php">Farmers with land</a>
+          <a class="nav-link" href="famers-managers.php">farmers with managers</a>
         </li>
       </ul>
     </div>
