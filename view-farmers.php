@@ -10,7 +10,7 @@
     </thead>
     <tbody>
 <?php
-while ($farmer = $farmers->fetch_assoc()){
+while ($farmer = $Farmer->fetch_assoc()){
 ?>
   <tr>
     <td><?php $farmer['farmer_id']; ?></td>
