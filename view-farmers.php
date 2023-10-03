@@ -13,9 +13,9 @@
 while ($farmer = $farmers->fetch_assoc()){
 ?>
   <tr>
-    <td><?php $farmer['farmer_id']; ?></td>
-    <td><?php $farmer['farmer_name']; ?></td>
-    <td><?php $farmer['phone_number']; ?></td>
+    <td><?php $farmers['farmer_id']; ?></td>
+    <td><?php $farmers['farmer_name']; ?></td>
+    <td><?php $farmers['phone_number']; ?></td>
   </tr>
 <?php
 }
