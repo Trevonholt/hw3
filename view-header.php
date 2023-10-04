@@ -28,9 +28,7 @@
         <li class="nav-item">
           <a class="nav-link" href="land.php">Land</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="land-with-animals.php">Land with animals</a>
-        </li>
+        
       </ul>
     </div>
   </div>
