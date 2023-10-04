@@ -23,7 +23,7 @@
           <a class="nav-link" href="farmers.php">Farmers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="animal.php">Animals</a>
+          <a class="nav-link" href="animals.php">Animals</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="land.php">Land</a>
