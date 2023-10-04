@@ -11,7 +11,7 @@
     </thead>
     <tbody>
 <?php
-while ($animal=$animalss->fetch_assoc()) {
+while ($animal=$animals->fetch_assoc()) {
 ?>
   <tr>
     <td><?php echo $animal['animal_id']; ?></td>
