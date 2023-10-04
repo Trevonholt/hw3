@@ -7,8 +7,8 @@
       <th>Type</th>
       <th>Breed</th>
       <th>Animal Count</th>
-      <th>Description</th>
       <th>Manger Name</th>
+      <th>Description</th>
       <th>Manager Age</th>
       </tr>
     </thead>
@@ -21,8 +21,8 @@ while ($animal=$animals->fetch_assoc()) {
     <td><?php echo $animal['type']; ?></td>
     <td><?php echo $animal['breed']; ?></td>
     <td><?php echo $animal['animal_count']; ?></td>
-    <td><?php echo $animal['description']; ?></td>
     <td><?php echo $animal['name']; ?></td>
+    <td><?php echo $animal['description']; ?></td>
     <td><?php echo $animal['age']; ?></td>
   </tr>
 <?php
