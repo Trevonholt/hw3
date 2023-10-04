@@ -6,6 +6,7 @@
       <th>ID</th>
       <th>Name</th>
       <th>Phone Number</th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@ while ($farmer=$farmers->fetch_assoc()) {
     <td><?php echo $farmer['farmer_id']; ?></td>
     <td><?php echo $farmer['farmer_name']; ?></td>
     <td><?php echo $farmer['phone_number']; ?></td>
+    <td><a href="animals-for-farmers.php">Animals</a></td>
   </tr>
 <?php
 }
