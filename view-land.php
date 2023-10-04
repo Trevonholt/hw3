@@ -19,7 +19,7 @@ while ($land=$lands->fetch_assoc()) {
     <td>
      <form method="post" action="land-with-animals.php>
         <input type="hidden" name="aid" value="<?php echo $land['land_id']; ?>">
-        <button type="submit" class="btn btn-primary">Lands</button>
+        <button type="submit" class="btn btn-primary">Animals</button>
       </form>
     </td>
   </tr>
