@@ -10,14 +10,14 @@
     </thead>
     <tbody>
 <?php
-while ($farmer=$farmers->fetch_assoc()){
+while ($farmer=$farmers->fetch_assoc()) {
 ?>
   <tr>
     <td><?php echo $farmer['farmer_id']; ?></td>
     <td><?php echo $farmer['farmer_name']; ?></td>
     <td><?php echo $farmer['phone_number']; ?></td>
   </tr>
-<php
+<?php
 }
 ?>
     </tbody>
