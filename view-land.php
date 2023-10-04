@@ -10,12 +10,12 @@
     </thead>
     <tbody>
 <?php
-while ($farmer=$farmers->fetch_assoc()) {
+while ($land=$lands->fetch_assoc()) {
 ?>
   <tr>
-    <td><?php echo $farmer['farmer_id']; ?></td>
-    <td><?php echo $farmer['farmer_name']; ?></td>
-    <td><?php echo $farmer['phone_number']; ?></td>
+    <td><?php echo $land['land_id']; ?></td>
+    <td><?php echo $farmer['city']; ?></td>
+    <td><?php echo $farmer['state']; ?></td>
   </tr>
 <?php
 }
