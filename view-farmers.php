@@ -6,6 +6,7 @@
       <th>ID</th>
       <th>Name</th>
       <th>Phone Number</th>
+      <th>Email</th>
       <th></th>
       </tr>
     </thead>
