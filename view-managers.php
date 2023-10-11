@@ -19,7 +19,6 @@ while ($manager=$managers->fetch_assoc()) {
     <td><?php echo $manager['manager_name']; ?></td>
     <td><?php echo $manager['description']; ?></td>
     <td><?php echo $manager['manager_number']; ?></td>
-    <td><a href="animals-for-farmers.php?id=<?php echo $farmer['farmer_id']; ?>">Animals</a></td>
   </tr>
 <?php
 }
