@@ -19,7 +19,6 @@ while ($breed=$breeds->fetch_assoc()) {
     <td><?php echo $breed['type']; ?></td>
     <td><?php echo $breed['breed']; ?></td>
     <td><?php echo $breed['gender']; ?></td>
-    <td><a href="animals-for-farmers.php?id=<?php echo $farmer['farmer_id']; ?>">Animals</a></td>
   </tr>
 <?php
 }
