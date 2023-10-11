@@ -4,7 +4,7 @@ require_once("model-breeds.php");
 
 $pageTitle="Breeds";
 include "view-header.php";
-$farmers=selectBreeds();
+$breeds=selectBreeds();
 include "view-breeds.php";
 include "view-footer.php";
 ?>
