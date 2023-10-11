@@ -2,7 +2,7 @@
 function selectFarmers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT farmer_id, farmer_name, phone_number FROM `Farmer`");
+        $stmt = $conn->prepare("SELECT farmer_id, farmer_name, phone_number, email FROM `farmer`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
