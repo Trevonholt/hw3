@@ -17,6 +17,8 @@ include "view-breeds-newform.php";
       <th>Breed</th>
       <th>Gender</th>
       <th></th>
+      <th></th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +30,12 @@ while ($breed=$breeds->fetch_assoc()) {
     <td><?php echo $breed['type']; ?></td>
     <td><?php echo $breed['breed']; ?></td>
     <td><?php echo $breed['gender']; ?></td>
+    <td>
+      
+    </td>
+    <td>
+      
+    </td>
   </tr>
 <?php
 }
