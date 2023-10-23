@@ -17,6 +17,8 @@ include "view-farmers-newform.php";
       <th>Phone Number</th>
       <th>Email</th>
       <th></th>
+      <th></th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +30,12 @@ while ($farmer=$farmers->fetch_assoc()) {
     <td><?php echo $farmer['farmer_name']; ?></td>
     <td><?php echo $farmer['phone_number']; ?></td>
     <td><?php echo $farmer['email']; ?></td>
+    <td>
+      
+    </td>
+    <td>
+      
+    </td>
     <td><a href="managers-by-farmer.php?id=<?php echo $farmer['farmer_id']; ?>">Managers</td>
   </tr>
 <?php
