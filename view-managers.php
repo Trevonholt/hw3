@@ -17,6 +17,8 @@ include "view-managers-newform.php";
       <th>Description</th>
       <th>Phone Number</th>
       <th></th>
+      <th></th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +30,12 @@ while ($manager=$managers->fetch_assoc()) {
     <td><?php echo $manager['manager_name']; ?></td>
     <td><?php echo $manager['description']; ?></td>
     <td><?php echo $manager['manager_number']; ?></td>
+    <td>
+      
+    </td>
+    <td>
+      
+    </td>
     <td>
       <form method="post" action="animals-by-manager.php">
         <input type="hidden" name="cid" value="<?php echo $manager['manager_id']; ?>">
