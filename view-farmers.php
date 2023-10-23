@@ -31,7 +31,10 @@ while ($farmer=$farmers->fetch_assoc()) {
     <td><?php echo $farmer['phone_number']; ?></td>
     <td><?php echo $farmer['email']; ?></td>
     <td>
-      
+<?php
+include "view-farmers-newform.php";
+?>
+  
     </td>
     <td>
       <form method="post" action="">
