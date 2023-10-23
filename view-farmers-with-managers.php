@@ -1,7 +1,7 @@
 <h1>Farmers with Managers</h1>
-  <div class="card-group">
+<div class="card-group">
 <?php
-while ($farmer=$farmers->fetch_assoc()) {
+while ($farmer = $farmers->fetch_assoc()) {
 ?>
   <div class="card">
     <div class="card-body">
