@@ -28,7 +28,7 @@ function insertFarmers($fName,$phoneN,$email) {
     }
 }
 
-function updateFarmer($fName,$phoneN,$email,$Fid) {
+function updateFarmers($fName,$phoneN,$email,$Fid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `farmer` set `farmer_name`=?, `phone_number`=?, `email`=?) where farmer_id=?");
