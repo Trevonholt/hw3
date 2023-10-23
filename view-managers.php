@@ -31,7 +31,9 @@ while ($manager=$managers->fetch_assoc()) {
     <td><?php echo $manager['description']; ?></td>
     <td><?php echo $manager['manager_number']; ?></td>
     <td>
-      
+<?php
+include "view-managers-editform.php";
+?>
     </td>
     <td>
       <form method="post" action="">
