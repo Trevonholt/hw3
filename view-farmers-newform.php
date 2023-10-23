@@ -29,6 +29,7 @@
               <label for="email" class="form-label">Email</label>
               <input type="text" class="form-control" id="email" name="email">
             </div>
+            <input type="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
