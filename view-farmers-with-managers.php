@@ -1,29 +1,24 @@
-<h1>Farmers</h1>
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Phone Number</th>
-      <th>Email</th>
-      <th></th>
-      </tr>
-    </thead>
-    <tbody>
+<h1>Farmers with Managers</h1>
+<div class="card-group">
 <?php
 while ($farmer=$farmers->fetch_assoc()) {
 ?>
-  <tr>
-    <td><?php echo $farmer['farmer_id']; ?></td>
-    <td><?php echo $farmer['farmer_name']; ?></td>
-    <td><?php echo $farmer['phone_number']; ?></td>
-    <td><?php echo $farmer['email']; ?></td>
-    <td><a href="managers-by-farmer.php?id=<?php echo $farmer['farmer_id']; ?>">Managers</td>
-  </tr>
+    <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><?php echo $farmer['farmer_name']; ?></h5>
+      <p class="card-text">
+<?php
+  $managers= selectManagersByFarmer($farmer['farmer_id']);
+  while ($manager = $managers->fetch_assoc()) {
+?>
+<?php
+  }
+?>
+      </p>
+      <p class="card-text"><small class="text-body-secondary">Phone Number: <?php echo $farmer['phone_number']; ?></small></p>
+    </div>
+  </div>
 <?php
 }
 ?>
-    </tbody>
-  </table>
 </div>
