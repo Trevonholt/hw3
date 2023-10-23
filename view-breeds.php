@@ -31,7 +31,9 @@ while ($breed=$breeds->fetch_assoc()) {
     <td><?php echo $breed['breed']; ?></td>
     <td><?php echo $breed['gender']; ?></td>
     <td>
-      
+<?php
+include "view-breeds-editform.php";
+?>
     </td>
     <td>
       <form method="post" action="">
