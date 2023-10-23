@@ -19,6 +19,12 @@ while ($manager=$managers->fetch_assoc()) {
     <td><?php echo $manager['manager_name']; ?></td>
     <td><?php echo $manager['description']; ?></td>
     <td><?php echo $manager['manager_number']; ?></td>
+    <td>
+      <form method="post" action="animals-by-managers.php">
+        <input type="hidden" name="cid" value="<?php echo $manager['manager_id']; ?>">
+        <button type="submit" class="btn btn-primary">Animals</button>
+</form>
+    </td>
   </tr>
 <?php
 }
