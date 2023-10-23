@@ -4,7 +4,7 @@ require_once("model-managers-by-farmer.php");
 
 $pageTitle="Managers for Farmers";
 include "view-header.php";
-$managers=selectManagersByFarmer($_GET['iid']);
+$managers=selectManagersByFarmer($_GET['id']);
 include "view-managers-by-farmer.php";
 include "view-footer.php";
 ?>
