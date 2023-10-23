@@ -29,7 +29,7 @@
           <a class="nav-link" href="managers.php">Mangers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="view-managers-by-farmers.php">Farmers Managers</a>
+          <a class="nav-link" href="">Farmers Managers</a>
         </li>
       </ul>
     </div>
