@@ -32,7 +32,7 @@ while ($farmer=$farmers->fetch_assoc()) {
     <td><?php echo $farmer['email']; ?></td>
     <td>
 <?php
-include "view-farmers-newform.php";
+include "view-farmers-editform.php";
 ?>
   
     </td>
