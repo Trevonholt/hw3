@@ -15,7 +15,7 @@ if (isset($_POST['actionType'])){
       }
       break;
         case "Edit": 
-      if (insertFarmers($_POST['fName'], $_POST['phoneN'], $_POST['email'], $_POST['Fid'])) {
+      if (updateFarmers($_POST['fName'], $_POST['phoneN'], $_POST['email'], $_POST['Fid'])) {
         echo '<div class="alert alert-success" role="alert">Farmer edited!</div>';
       } else{
         echo '<div class="alert alert-danger" role="alert">Error!</div>';
