@@ -1,5 +1,16 @@
-<h1>Farmers with Managers</h1>
-
+<h1>Farmers</h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th></th>
+      </tr>
+    </thead>
+    <tbody>
 <?php
 while ($farmer=$farmers->fetch_assoc()) {
 ?>
