@@ -16,12 +16,12 @@
 while ($animal=$animals->fetch_assoc()) {
 ?>
   <tr>
-    <td><?php echo $manager['manager_id']; ?></td>
-    <td><?php echo $manager['manager_name']; ?></td>
-    <td><?php echo $manager['description']; ?></td>
-    <td><?php echo $manager['manager_number']; ?></td>
-    <td><?php echo $manager['type']; ?></td>
-    <td><?php echo $manager['count']; ?></td>
+    <td><?php echo $animal['manager_id']; ?></td>
+    <td><?php echo $animal['manager_name']; ?></td>
+    <td><?php echo $animal['description']; ?></td>
+    <td><?php echo $animal['manager_number']; ?></td>
+    <td><?php echo $animal['type']; ?></td>
+    <td><?php echo $animal['count']; ?></td>
   </tr>
 <?php
 }
