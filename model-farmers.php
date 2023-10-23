@@ -31,7 +31,7 @@ function insertFarmers($fName,$phoneN,$email) {
 function updateFarmers($fName,$phoneN,$email,$Fid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `farmer` set `farmer_name`=?, `phone_number`=?, `email`=?) where farmer_id=?");
+        $stmt = $conn->prepare("update `farmer` set `farmer_name`=?, `phone_number`=?, `email`=? where farmer_id=?");
         $stmt->bind_param("sssi", $fName, $phoneN, $email, $Fid);
         $success = $stmt->execute();
         $conn->close();
