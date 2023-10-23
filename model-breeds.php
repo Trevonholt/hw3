@@ -31,7 +31,7 @@ function updateBreeds($type, $breed, $gender,$bid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `breed` set `type`=?, `breed`=?, `gender`=? where breed_id=?");
-        $stmt->bind_param("sssi", $type, $breed, $gender $bid);
+        $stmt->bind_param("sssi", $type, $breed, $gender, $bid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
