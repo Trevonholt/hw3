@@ -21,13 +21,6 @@ while ($farmer = $farmers->fetch_assoc()) {
       <p class="card-text"><small class="text-body-secondary">Phone Number: <?php echo $farmer['phone_number']; ?></small></p>
     </div>
   </div>
-  <tr>
-    <td><?php echo $farmer['farmer_id']; ?></td>
-    <td><?php echo $farmer['farmer_name']; ?></td>
-    <td><?php echo $farmer['phone_number']; ?></td>
-    <td><?php echo $farmer['email']; ?></td>
-    <td><a href="managers-by-farmer.php?id=<?php echo $farmer['farmer_id']; ?>">Managers</td>
-  </tr>
 <?php
 }
 ?>
