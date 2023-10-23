@@ -20,6 +20,7 @@ while ($farmer = $farmers->fetch_assoc()) {
       </p>
       <p class="card-text"><small class="text-body-secondary">Phone Number: <?php echo $farmer['phone_number']; ?></small></p>
     </div>
+  </div>
   <tr>
     <td><?php echo $farmer['farmer_id']; ?></td>
     <td><?php echo $farmer['farmer_name']; ?></td>
