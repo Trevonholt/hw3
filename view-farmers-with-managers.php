@@ -27,9 +27,9 @@ while ($farmer = $farmers->fetch_assoc()) {
         <?php echo $manager['manager_name']; ?>-<?php echo $manager['breed_id']; ?>- <?php echo $manager['type']; ?>-<?php echo $manager['count']; ?>
       </div>
       <div class="col-auto">
-<?php
+<!-- <?php
 include "view-mans-editform.php";
-?>
+?> -->
       </div>
       <div class="col-auto">
         <form method="post" action="">
