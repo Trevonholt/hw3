@@ -15,8 +15,6 @@ while ($farmer=$farmers->fetch_assoc()) {
     <div class="card">
     <div class="card-body">
       <h5 class="card-title"><?php echo $farmer['farmer_name']; ?></h5>
-      <ch>l</ch>
-      <ch></ch>
       <p class="card-text">
       <ul class="list-group">    
 <?php
@@ -30,6 +28,7 @@ while ($farmer=$farmers->fetch_assoc()) {
       </ul>
       </p>
       <p class="card-text"><small class="text-body-secondary">Phone Number: <?php echo $farmer['phone_number']; ?></small></p>
+      <td> 3</td>
     </div>
   </div>
 <?php
