@@ -21,6 +21,10 @@
               <label for="iid" class="form-label">Farmer ID</label>
               <input type="text" class="form-control" id="iid" name="iid">
             </div>
+             <div class="mb-3">
+              <label for="bid" class="form-label">Breed ID</label>
+              <input type="text" class="form-control" id="bid" name="bid">
+            </div>
             <div class="mb-3">
               <label for="mid" class="form-label">Manager ID</label>
               <input type="text" class="form-control" id="mid" name="mid">
