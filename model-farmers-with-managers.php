@@ -41,11 +41,11 @@ function insertMans($iid, $bid, $mid, $type, $count) {
     }
 }
 
-function updateMans($fid, $mid, $mName, $type, $count, $aid) {
+function updateMans($iid, $bid, $mid, $type, $count, $aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `breed` set `type`=?, `breed`=?, `gender`=? where breed_id=?");
-        $stmt->bind_param("sssi", $type, $breed, $gender, $bid);
+        $stmt = $conn->prepare("update `animal` set `farmer_id`=?, `breed_id`=?, `manager_id`=?, `type`=?, `count`=? where animal_id=?");
+        $stmt->bind_param("iiisii", $iid, $bid, $mid, $type, $count, $aid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -55,11 +55,11 @@ function updateMans($fid, $mid, $mName, $type, $count, $aid) {
     }
 }
 
-function deleteMans($bid) {
+function deleteMans($aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from breed where breed_id=?");
-        $stmt->bind_param("i", $bid);
+        $stmt = $conn->prepare("delete from breed where animal_id=?");
+        $stmt->bind_param("i", $aid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
