@@ -9,14 +9,14 @@ if (isset($_POST['actionType'])){
   switch ($_POST['actionType']){
     case "Add": 
       if (insertMans($_POST['iid'],  $_POST['bid'], $_POST['mid'], $_POST['type'], $_POST['count'])) {
-        echo '<div class="alert alert-success" role="alert">Manager added!</div>';
+        echo '<div class="alert alert-success" role="alert">Animal added!</div>';
       } else{
         echo '<div class="alert alert-danger" role="alert">Error!</div>';
       }
       break;
         case "Edit": 
       if (updateMans($_POST['iid'], $_POST['bid'], $_POST['mid'], $_POST['type'], $_POST['count'], $_POST['aid'])) {
-        echo '<div class="alert alert-success" role="alert">Breed edited!</div>';
+        echo '<div class="alert alert-success" role="alert">Animal edited!</div>';
       } else{
         echo '<div class="alert alert-danger" role="alert">Error!</div>';
       }
