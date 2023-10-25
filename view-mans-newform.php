@@ -19,10 +19,7 @@
         <form method="post" action="">
             <div class="mb-3">
               <label for="iid" class="form-label">Farmer ID</label>
-<?php
-$farmerList = selectFarmersForInput();
-include "view-farmer-input-list.php";
-?>
+              <input type="text" class="form-control" id="iid" name="iid">
             </div>
              <div class="mb-3">
               <label for="bid" class="form-label">Breed ID</label>
