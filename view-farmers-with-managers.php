@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-<h1>Farmers with Managers</h1>
+<h1>Farmers with Managers </h1>
   </div>
   <div class="col-auto">
 <?php
@@ -24,12 +24,12 @@ while ($farmer = $farmers->fetch_assoc()) {
     <li class="list-group-item">
     <div class="row">
       <div class="col">
-        <?php echo $manager['manager_name']; ?>-<?php echo $manager['breed_id']; ?>- <?php echo $manager['type']; ?>-<?php echo $manager['count']; ?>
+        <?php echo $manager['manager_name']; ?>-<?php echo $manager['breed_id']; ?>- <?php echo $manager['type']; ?>-<?php echo $manager['count']; ?>>
       </div>
       <div class="col-auto">
-<!-- <?php
-include "view-mans-editform.php";
-?> -->
+<?php
+include "view-farmers-with-managers-editform.php";
+?>
       </div>
       <div class="col-auto">
         <form method="post" action="">
