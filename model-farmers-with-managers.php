@@ -27,10 +27,10 @@ function selectManagersByFarmer($iid) {
     }
 }
 
-function insertMans($fid, $mid, $mName, $mNum) {
+function insertMans($fid, $mid, $mName, $type, $count) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `animal` ( `farmer_id`, `manager_id`, `manager_name`, 'phone_number') VALUES (?,?,?,?)");
+        $stmt = $conn->prepare("INSERT INTO `animal` ( `farmer_id`, `manager_id`, `manager_name`, 'type', 'count') VALUES (?,?,?,?)");
         $stmt->bind_param("iiss", fid, $mid, $mName, $mNum);
         $success = $stmt->execute();
         $conn->close();
@@ -41,7 +41,7 @@ function insertMans($fid, $mid, $mName, $mNum) {
     }
 }
 
-function updateMans($fid, $mid, $mName, $mNum, $aid) {
+function updateMans($fid, $mid, $mName, $type, $count, $aid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `breed` set `type`=?, `breed`=?, `gender`=? where breed_id=?");
