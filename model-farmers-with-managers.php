@@ -66,6 +66,6 @@ function deleteMans($aid) {
     } catch (Exception $e) {
         $conn->close();
         throw $e;
-    }
+
 }
 ?>
