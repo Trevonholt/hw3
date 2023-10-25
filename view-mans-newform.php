@@ -26,10 +26,6 @@
               <input type="text" class="form-control" id="mid" name="mid">
             </div>
             <div class="mb-3">
-              <label for="mName" class="form-label">Manager Name</label>
-              <input type="text" class="form-control" id="mName" name="mName">
-            </div>
-            <div class="mb-3">
               <label for="type" class="form-label">Animal Type</label>
               <input type="text" class="form-control" id="type" name="type">
             </div>
