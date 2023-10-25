@@ -33,7 +33,7 @@ include "view-mans-editform.php";
       </div>
       <div class="col-auto">
         <form method="post" action="">
-          <input type="hidden" name="" value=mid"<?php echo $manager['manager_id']; ?>">
+          <input type="hidden" name="" value="aid <?php echo $manager['manager_id']; ?>">
           <input type="hidden" name="actionType" value="Delete">
           <button type="submit" class="btn" onclick="return confirm('Are you sure?');">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
