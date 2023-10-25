@@ -27,11 +27,11 @@ function selectManagersByFarmer($iid) {
     }
 }
 
-function insertMans($iid, $bid, $mid, $type, $count) {
+function insertAnimal($iid, $cid, $sem, $room, $time) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `animal` ( `farmer_id`, `breed_id`, `manager_id`, 'type', 'count') VALUES (?,?,?,?,?)");
-        $stmt->bind_param("iiisi", $iid, $bid, $mid, $type, $count);
+        $stmt = $conn->prepare("INSERT INTO `section` (`instructor_id`, `course_id`, `semester`, `room`, `day_time`) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("iisss", $iid, $cid, $sem, $room, $time);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -41,11 +41,11 @@ function insertMans($iid, $bid, $mid, $type, $count) {
     }
 }
 
-function updateMans($iid, $bid, $mid, $type, $count, $aid) {
+function updateSection($iid, $cid, $sem, $room, $time, $sid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `animal` set `farmer_id`=?, `breed_id`=?, `manager_id`=?, `type`=?, `count`=? where animal_id=?");
-        $stmt->bind_param("iiisii", $iid, $bid, $mid, $type, $count, $aid);
+        $stmt = $conn->prepare("update `section` set `instructor_id` = ?, `course_id` = ?, `semester` = ?, `room` = ?, `day_time` = ? where section_id = ?");
+        $stmt->bind_param("iisssi", $iid, $cid, $sem, $room, $time, $sid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -55,11 +55,11 @@ function updateMans($iid, $bid, $mid, $type, $count, $aid) {
     }
 }
 
-function deleteMans($aid) {
+function deleteSection($sid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from animal where animal_id=?");
-        $stmt->bind_param("i", $aid);
+        $stmt = $conn->prepare("delete from section where section_id=?");
+        $stmt->bind_param("i", $sid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -67,6 +67,5 @@ function deleteMans($aid) {
         $conn->close();
         throw $e;
     }
-
 }
 ?>
