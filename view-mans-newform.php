@@ -18,8 +18,8 @@
       <div class="modal-body">
         <form method="post" action="">
             <div class="mb-3">
-              <label for="fid" class="form-label">Farmer ID</label>
-              <input type="text" class="form-control" id="fid" name="fid">
+              <label for="iid" class="form-label">Farmer ID</label>
+              <input type="text" class="form-control" id="iid" name="iid">
             </div>
             <div class="mb-3">
               <label for="mid" class="form-label">Manager ID</label>
