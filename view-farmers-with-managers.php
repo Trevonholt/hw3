@@ -18,7 +18,7 @@ while ($farmer = $farmers->fetch_assoc()) {
       <p class="card-text">
       <ul class="list-group">
 <?php
-  $courses = selectManagersByFarmer($farmer['farmer_id']);
+  $managers = selectManagersByFarmer($farmer['farmer_id']);
   while ($manager = $managers->fetch_assoc()) {
 ?>
     <li class="list-group-item">
