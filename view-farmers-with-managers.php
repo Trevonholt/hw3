@@ -22,7 +22,11 @@ while ($farmer=$farmers->fetch_assoc()) {
   while ($manager = $managers->fetch_assoc()) {
 ?>
       <li class="list-group-item"><?php echo $manager['manager_name']; ?>- <?php echo $manager['type']; ?>-<?php echo $manager['count']; ?>
-        <td> 3</td>
+        <td> 
+<?php
+include "view-mans-editform.php";
+?>
+        </td>
         <td> 
           <form method="post" action="">
         <input type="hidden" name="aid" value="<?php echo $animal['animal_id']; ?>">
