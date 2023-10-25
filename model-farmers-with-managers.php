@@ -58,7 +58,7 @@ function updateMans($iid, $bid, $mid, $type, $count, $aid) {
 function deleteMans($aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from breed where animal_id=?");
+        $stmt = $conn->prepare("delete from animal where animal_id=?");
         $stmt->bind_param("i", $aid);
         $success = $stmt->execute();
         $conn->close();
