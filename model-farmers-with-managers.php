@@ -30,8 +30,8 @@ function selectManagersByFarmer($iid) {
 function insertMans($fid, $mid, $mName, $type, $count) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `animal` ( `farmer_id`, `manager_id`, `manager_name`, 'type', 'count') VALUES (?,?,?,?)");
-        $stmt->bind_param("iiss", fid, $mid, $mName, $mNum);
+        $stmt = $conn->prepare("INSERT INTO `animal` ( `farmer_id`, `manager_id`, `manager_name`, 'type', 'count') VALUES (?,?,?,?,?)");
+        $stmt->bind_param("iisss", $fid, $mid, $mName, $type, $count);
         $success = $stmt->execute();
         $conn->close();
         return $success;
