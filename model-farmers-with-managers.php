@@ -31,7 +31,7 @@ function insertMans($fid, $mid, $type, $count) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `animal` ( `farmer_id`, `manager_id`, 'type', 'count') VALUES (?,?,?,?)");
-        $stmt->bind_param("iiss", $fid, $mid, $type, $count);
+        $stmt->bind_param("iisi", $fid, $mid, $type, $count);
         $success = $stmt->execute();
         $conn->close();
         return $success;
