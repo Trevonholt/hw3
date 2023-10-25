@@ -21,11 +21,11 @@ if (isset($_POST['actionType'])){
         echo '<div class="alert alert-danger" role="alert">Error!</div>';
       }
       break;
-    case "Delete": 
-      if (deleteMans($_POST['aid'])) {
-        echo '<div class="alert alert-success" role="alert">Animal deleted!</div>';
-      } else{
-        echo '<div class="alert alert-danger" role="alert">Error!</div>';
+    case "Delete":
+      if (deleteSection($_POST['aid'])) {
+        echo '<div class="alert alert-success" role="alert">Animal deleted.</div>';
+      } else {
+        echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
       break;
   }
