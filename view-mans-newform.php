@@ -30,8 +30,12 @@
               <input type="text" class="form-control" id="mName" name="mName">
             </div>
             <div class="mb-3">
-              <label for="mNum" class="form-label">Manager Number</label>
-              <input type="text" class="form-control" id="mNum" name="mNum">
+              <label for="type" class="form-label">Animal Type</label>
+              <input type="text" class="form-control" id="type" name="type">
+            </div>
+            <div class="mb-3">
+              <label for="count" class="form-label">Animal Count</label>
+              <input type="text" class="form-control" id="count" name="count">
             </div>
             <input type="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
