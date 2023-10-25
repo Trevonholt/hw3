@@ -26,4 +26,46 @@ function selectManagersByFarmer($iid) {
         throw $e;
     }
 }
+
+function insertMans($fid, $mid, $mName, $mNum) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `animal` ( `farmer_id`, `manager_id`, `manager_name`, 'phone_number') VALUES (?,?,?,?)");
+        $stmt->bind_param("iiss", fid, $mid, $mName, $mNum);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function updateMans($fid, $mid, $mName, $mNum, $aid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("update `breed` set `type`=?, `breed`=?, `gender`=? where breed_id=?");
+        $stmt->bind_param("sssi", $type, $breed, $gender, $bid);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function deleteMans($bid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("delete from breed where breed_id=?");
+        $stmt->bind_param("i", $bid);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
