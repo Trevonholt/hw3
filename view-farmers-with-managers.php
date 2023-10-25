@@ -21,7 +21,10 @@ while ($farmer=$farmers->fetch_assoc()) {
   $managers= selectManagersByFarmer($farmer['farmer_id']);
   while ($manager = $managers->fetch_assoc()) {
 ?>
-      <li class="list-group-item"><?php echo $manager['manager_name']; ?>- <?php echo $manager['type']; ?>-<?php echo $manager['count']; ?></li><td> 3</td>
+      <li class="list-group-item"><?php echo $manager['manager_name']; ?>- <?php echo $manager['type']; ?>-<?php echo $manager['count']; ?>
+        <td> 3</td>
+        <td> 3</td>
+      </li>
 <?php
   }
 ?>
