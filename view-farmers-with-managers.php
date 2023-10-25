@@ -1,4 +1,13 @@
-<h1>Farmers with Managers</h1>
+<div class="row">
+  <div class="col">
+    <h1>Farmers with Managers</h1>
+  </div>
+  <div class="col-auto">
+<?php
+include "view-mans-newform.php";
+?>
+  </div>
+</div>
 <div class="card-group">
 <?php
 while ($farmer=$farmers->fetch_assoc()) {
