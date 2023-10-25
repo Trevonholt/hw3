@@ -26,6 +26,33 @@ function selectManagersByFarmer($iid) {
         throw $e;
     }
 }
+function selectFarmersForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT farmer_id, farmer_name FROM `farmer` order by farmer_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectManagersForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT manager_id, manager_name FROM `manager` order by manager_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 
 function insertAnimal($iid, $bid, $mid, $type, $count) {
     try {
