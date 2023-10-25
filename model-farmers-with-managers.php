@@ -27,11 +27,11 @@ function selectManagersByFarmer($iid) {
     }
 }
 
-function insertAnimal($iid, $cid, $sem, $room, $time) {
+function insertAnimal($iid, $bid, $mid, $type, $count) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `section` (`instructor_id`, `course_id`, `semester`, `room`, `day_time`) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("iisss", $iid, $cid, $sem, $room, $time);
+        $stmt = $conn->prepare("INSERT INTO `animal`(`farmer_id`, `breed_id`, `manager_id`, `type`, `count`) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("iiisi", $iid, $bid, $mid, $type, $count);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -41,11 +41,11 @@ function insertAnimal($iid, $cid, $sem, $room, $time) {
     }
 }
 
-function updateSection($iid, $cid, $sem, $room, $time, $sid) {
+function updateAnimal($iid, $bid, $mid, $type, $count, $aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `section` set `instructor_id` = ?, `course_id` = ?, `semester` = ?, `room` = ?, `day_time` = ? where section_id = ?");
-        $stmt->bind_param("iisssi", $iid, $cid, $sem, $room, $time, $sid);
+        $stmt = $conn->prepare("update `animal` set `farmer_id` = ?, `breed_id` = ?, `manager_id` = ?, `type` = ?, `count` = ? where animal_id = ?");
+        $stmt->bind_param("iiisii", $iid, $bid, $mid, $type, $count, $aid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -55,11 +55,11 @@ function updateSection($iid, $cid, $sem, $room, $time, $sid) {
     }
 }
 
-function deleteSection($sid) {
+function deleteAnimal($aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from section where section_id=?");
-        $stmt->bind_param("i", $sid);
+        $stmt = $conn->prepare("delete from animal where animal_id=?");
+        $stmt->bind_param("i", $aid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
