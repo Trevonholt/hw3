@@ -15,7 +15,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
 }
-
+}
 $farmers = selectFarmers();
 include "view-farmers-with-managers.php";
 include "view-footer.php";
