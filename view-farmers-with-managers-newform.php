@@ -21,7 +21,7 @@
 <?php
 $FarmerList = selectFarmersForInput();
 $selectedFarmer = 0;
-include "view-farmer-input-list.php";
+include "view-famer-input-list.php";
 ?>
           </div>
           <div class="mb-3">
