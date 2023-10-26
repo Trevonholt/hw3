@@ -18,7 +18,11 @@
         <form method="post" action="">
             <div class="mb-3">
               <label for="iid<?php echo $manager['animal_id']; ?>" class="form-label">Farmer</label>
-              <input type="text" class="form-control" id="iid<?php echo $manager['animal_id']; ?>" name="iid<?php echo $manager['farmer_id']; ?>">
+<?php
+$farmerList=selectFarmerForInput();
+$selectedFarmer=$manager['farmer_id'];
+include "view-farmer-input-list.php";
+?>
             </div>
             <div class="mb-3">
               <label for="bid<?php echo $manager['animal_id']; ?>" class="form-label">Breed</label>
