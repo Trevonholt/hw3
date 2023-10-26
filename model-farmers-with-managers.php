@@ -54,7 +54,7 @@ function updateAnimals($iid, $bid, $mid,$type,$count,$aid) {
     }
 }
 
-function insertAnimals($aid) {
+function deleteAnimals($aid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from animal where animal_id=?");
