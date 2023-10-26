@@ -27,7 +27,9 @@ while ($farmer=$farmers->fetch_assoc()) {
         <?php echo $manager['manager_name']; ?>- <?php echo $manager['type']; ?>-<?php echo $manager['count']; ?>
         </div>
       <div class="col-auto">
-<!--      put edit      -->
+<?php
+include "view-farmers-with-managers-editform.php";
+?>
       </div>
       <div class="col-auto">
        <form method="post" action="">
