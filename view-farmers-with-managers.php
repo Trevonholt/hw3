@@ -21,12 +21,16 @@ while ($farmer=$farmers->fetch_assoc()) {
   $managers= selectManagersByFarmer($farmer['farmer_id']);
   while ($manager = $managers->fetch_assoc()) {
 ?>
-      <li class="list-group-item"><?php echo $manager['manager_name']; ?>-<?php echo $manager['breed_id']; ?>- <?php echo $manager['type']; ?>-<?php echo $manager['count']; ?>
-        <td> 
-          
-        </td>
-        <td> 
-          <form method="post" action="">
+      <li class="list-group-item">
+    <div class="row"> 
+      <div class="col">
+        <?php echo $manager['manager_name']; ?>-<?php echo $manager['breed_id']; ?>- <?php echo $manager['type']; ?>-<?php echo $manager['count']; ?>
+        </div>
+      <div class="col-auto">
+<!--      put edit      -->
+      </div>
+      <div class="col-auto">
+       <form method="post" action="">
         <input type="hidden" name="aid" value="<?php echo $animal['animal_id']; ?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
@@ -36,7 +40,8 @@ while ($farmer=$farmers->fetch_assoc()) {
             </svg>
         </button>
       </form>
-        </td>
+      </div>
+    </div>
       </li>
 <?php
   }
