@@ -3,9 +3,9 @@
     <h1>Farmers with Managers</h1>
   </div>
   <div class="col-auto">
-<?php
+<!-- <?php
 include "view-farmers-with-managers-newform.php";
-?>
+?> -->
   </div>
 </div>
 <div class="card-group">
