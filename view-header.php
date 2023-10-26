@@ -26,7 +26,7 @@
           <a class="nav-link" href="breeds.php">Breed</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="managers.php">Mangers</a>
+          <a class="nav-link" href="managers.php">Managers</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="farmers-with-managers.php">Farmers with Managers</a>
