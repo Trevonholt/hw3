@@ -24,7 +24,7 @@ while ($farmer=$farmers->fetch_assoc()) {
       <li class="list-group-item">
     <div class="row"> 
       <div class="col">
-        <?php echo $manager['manager_name']; ?>-<?php echo $manager['breed_id']; ?>- <?php echo $manager['type']; ?>-<?php echo $manager['count']; ?>
+        <?php echo $manager['manager_name']; ?>-<?php echo $manager['animal_id']; ?><?php echo $manager['breed_id']; ?>- <?php echo $manager['type']; ?>-<?php echo $manager['count']; ?>
         </div>
       <div class="col-auto">
 <!--      put edit      -->
