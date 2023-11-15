@@ -52,6 +52,7 @@ while ($farmer=$farmers->fetch_assoc()) {
             label: 'Bar Dataset',
             data: [
 <?php
+$farmers=selectFarmers();
 while ($farmer=$farmers->fetch_assoc()) {
   echo $farmer['num_managers'] . ", ";
 }
