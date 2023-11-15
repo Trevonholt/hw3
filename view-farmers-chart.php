@@ -42,9 +42,9 @@ while ($farmer=$farmers->fetch_assoc()) {
 
 
 <script>
-  const ctx = document.getElementById('myChart1');
+  const ttt = document.getElementById('myChart1');
 
- new Chart(ctx, {
+ new Chart(ttt, {
     type: 'line',
     data: {
     datasets: [{
