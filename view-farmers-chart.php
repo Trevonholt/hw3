@@ -151,6 +151,6 @@ while ($farmer=$farmers->fetch_assoc()) {
     borderColor: 'rgb(75, 192, 192)',
     tension: 0.1
   }]
-};
+}
   });
 </script>
