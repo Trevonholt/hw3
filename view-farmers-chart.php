@@ -79,7 +79,7 @@ while ($farmer=$farmers->fetch_assoc()) {
 
 
 <script>
-  const ttt = document.getElementById('myChart2');
+  const tvt = document.getElementById('myChart2');
 
  new Chart(tvt, {
     type: 'polarArea',
