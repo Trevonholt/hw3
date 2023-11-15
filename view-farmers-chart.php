@@ -112,6 +112,6 @@ while ($farmer=$farmers->fetch_assoc()) {
   }]
 },
 options: {}
-};
+});
   
 </script>
