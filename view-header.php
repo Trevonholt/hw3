@@ -31,6 +31,9 @@
         <li class="nav-item">
           <a class="nav-link" href="farmers-with-managers.php">Farmers with Managers</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="farmers-chart.php">Farmers Chart</a>
+        </li>
       </ul>
     </div>
   </div>
