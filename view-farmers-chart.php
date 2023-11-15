@@ -45,27 +45,27 @@ while ($farmer=$farmers->fetch_assoc()) {
   const ttt = document.getElementById('myChart1');
 
  new Chart(ttt, {
-    type: 'line',
+    type: 'bar',
     data: {
-    datasets: [{
-        data: [
+        datasets: [{
+            type: 'bar',
+            label: 'Bar Dataset',
+            data: [
 <?php
 while ($farmer=$farmers->fetch_assoc()) {
   echo $farmer['num_managers'] . ", ";
 }
 ?>
-        ]
-    }],
-
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-        <?php
+              ]
+        }, ],
+        labels: [
+<?php
 $farmers=selectFarmers();
 while ($farmer=$farmers->fetch_assoc()) {
   echo "'" . $farmer['farmer_name'] . "', ";
 }
 ?>
-    ]
-},
+          ]
+    },
   });
 </script>
