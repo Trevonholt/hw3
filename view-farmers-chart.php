@@ -115,3 +115,42 @@ options: {}
 });
   
 </script>
+
+<div>
+  <canvas id="myChart3"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+  const ttx = document.getElementById('myChart3');
+
+  new Chart(ttx, {
+    type: 'line',
+    data: {
+  labels: labels,
+  datasets: [{
+    label: [
+<?php
+$farmers=selectFarmers();
+while ($farmer=$farmers->fetch_assoc()) {
+  echo "'" . $farmer['farmer_name'] . "', ";
+}
+?>
+    ],
+    data: [
+<?php
+$farmers=selectFarmers();
+while ($farmer=$farmers->fetch_assoc()) {
+  echo $farmer['num_managers'] . ", ";
+}
+?>
+],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+};
+  });
+</script>
