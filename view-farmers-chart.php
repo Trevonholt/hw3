@@ -110,5 +110,5 @@ while ($farmer=$farmers->fetch_assoc()) {
       'rgb(54, 162, 235)'
     ]
   }]
-};
+});
 </script>
