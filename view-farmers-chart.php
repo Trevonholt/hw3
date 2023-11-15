@@ -129,16 +129,16 @@ options: {}
   new Chart(ttx, {
     type: 'line',
     data: {
-  labels: labels,
-  datasets: [{
-    label: [
-<?php
+  labels: [
+    <?php
 $farmers=selectFarmers();
 while ($farmer=$farmers->fetch_assoc()) {
   echo "'" . $farmer['farmer_name'] . "', ";
 }
 ?>
-    ],
+  ],
+  datasets: [{
+    label: 'My First Dataset',
     data: [
 <?php
 $farmers=selectFarmers();
