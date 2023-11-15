@@ -40,6 +40,9 @@
         <li class="nav-item">
           <a class="nav-link" href="view-farmers-chart-3.php">Farmers Chart 3</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="view-farmers-chart-4.php">Farmers Chart 4</a>
+        </li>
       </ul>
     </div>
   </div>
