@@ -103,4 +103,5 @@ while ($farmer=$farmers->fetch_assoc()) {
 ?>
           ]
     },
+    });
 </script>
