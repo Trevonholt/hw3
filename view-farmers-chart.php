@@ -33,6 +33,16 @@ while ($farmer=$farmers->fetch_assoc()) {
     ]
 },
   });
+</script>
+<div>
+  <canvas id="myChart1"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+  const ctx = document.getElementById('myChart1');
 
  new Chart(ctx, {
     type: 'line',
@@ -59,4 +69,3 @@ while ($farmer=$farmers->fetch_assoc()) {
 },
   });
 </script>
-
