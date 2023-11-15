@@ -84,24 +84,24 @@ while ($farmer=$farmers->fetch_assoc()) {
  new Chart(tvt, {
     type: 'polarArea',
     data: {
-          labels: [
-            <?php
+      labels: [
+<?php
 $farmers=selectFarmers();
 while ($farmer=$farmers->fetch_assoc()) {
   echo "'" . $farmer['farmer_name'] . "', ";
 }
-?>    
+?>
   ],
   datasets: [{
     label: 'My First Dataset',
     data: [
-      <?php
+<?php
 $farmers=selectFarmers();
 while ($farmer=$farmers->fetch_assoc()) {
   echo $farmer['num_managers'] . ", ";
 }
 ?>
-          ],
+],
     backgroundColor: [
       'rgb(255, 99, 132)',
       'rgb(75, 192, 192)',
@@ -110,5 +110,6 @@ while ($farmer=$farmers->fetch_assoc()) {
       'rgb(54, 162, 235)'
     ]
   }]
-});
+};
+  
 </script>
