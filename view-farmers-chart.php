@@ -11,7 +11,7 @@
 
   new Chart(ctx, {
     type: 'doughnut',
-    data= {
+    data: {
     datasets: [{
         data: [
 <?php
