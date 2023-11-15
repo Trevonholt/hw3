@@ -155,6 +155,7 @@ while ($farmer=$farmers->fetch_assoc()) {
   });
 </script>
 
+<script>
         var options = {
           series: [
           {
@@ -222,3 +223,4 @@ while ($farmer=$farmers->fetch_assoc()) {
 
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
+</script>
