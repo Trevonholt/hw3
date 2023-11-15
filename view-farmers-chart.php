@@ -101,7 +101,7 @@ while ($farmer=$farmers->fetch_assoc()) {
   echo $farmer['num_managers'] . ", ";
 }
 ?>
-],
-}]
-};
+          ]
+    },
+  });
 </script>
