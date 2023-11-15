@@ -33,5 +33,30 @@ while ($farmer=$farmers->fetch_assoc()) {
     ]
 },
   });
+
+ new Chart(ctx, {
+    type: 'line',
+    data: {
+    datasets: [{
+        data: [
+<?php
+while ($farmer=$farmers->fetch_assoc()) {
+  echo $farmer['num_managers'] . ", ";
+}
+?>
+        ]
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        <?php
+$farmers=selectFarmers();
+while ($farmer=$farmers->fetch_assoc()) {
+  echo "'" . $farmer['farmer_name'] . "', ";
+}
+?>
+    ]
+},
+  });
 </script>
 
