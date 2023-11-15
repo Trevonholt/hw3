@@ -70,3 +70,38 @@ while ($farmer=$farmers->fetch_assoc()) {
     },
   });
 </script>
+
+<div>
+  <canvas id="myChart2"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+  const ttt = document.getElementById('myChart2');
+
+ new Chart(tvt, {
+    type: 'polarArea',
+    data: {
+          labels: [
+            <?php
+$farmers=selectFarmers();
+while ($farmer=$farmers->fetch_assoc()) {
+  echo "'" . $farmer['farmer_name'] . "', ";
+}
+?>    
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [
+      <?php
+$farmers=selectFarmers();
+while ($farmer=$farmers->fetch_assoc()) {
+  echo $farmer['num_managers'] . ", ";
+}
+?>
+],
+}]
+};
+</script>
