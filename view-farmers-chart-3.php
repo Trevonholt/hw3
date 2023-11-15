@@ -1,7 +1,14 @@
+  # latest stable
+  $ npm install recharts
 <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
 <script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
+
+  $ git clone https://github.com/recharts/recharts.git
+  $ cd recharts
+  $ npm install
+  $ npm run build
 
 <script>
 import React, { PureComponent } from 'react';
